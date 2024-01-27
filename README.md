@@ -15,7 +15,8 @@ Configure your server as normal.
 
 The server port and ram size are set at startup as well as default map.
 Add you `.pak` files to `./baseq3` as well as your configuration files in `.cfg`
-##Future plan
+
+## Future plan
 
 Ounce I have understood how the `text` parser of pterodactyl works, I will add a proper server.cfg configuration.
 Which will include pterodactyl variables for password, motd etc.
