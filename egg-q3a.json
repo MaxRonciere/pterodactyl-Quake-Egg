@@ -1,0 +1,31 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2024-01-27T18:54:44+01:00",
+    "name": "IOQ3A",
+    "author": "max.ronciere@gmail.com",
+    "description": null,
+    "features": null,
+    "docker_images": {
+        "Debian": "ghcr.io\/parkervcp\/yolks:debian"
+    },
+    "file_denylist": [],
+    "startup": ".\/ioq3ded +set net_port {{SERVER_PORT}} +set com_hunkmegs {{SERVER_MEMORY}} +map q3dm17 +exec server.cfg",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"InitGame\"\r\n}",
+        "logs": "{}",
+        "stop": "quit"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\\\/bin\\\/bash\r\n\r\napt update\r\napt install -y ioquake3\r\n\r\nif [ ! -d \/mnt\/server\/ ]; then\r\n    mkdir \/mnt\/server\/\r\nfi\r\n\r\ncd \/mnt\/server\r\nmv \/usr\/lib\/ioquake3\/* \/mnt\/server\r\nrm -rf \/usr\/lib\/ioquake3\r\nchmod +x .\/ioq3ded\r\n\r\necho \"set vm_game 2\" > .\/baseq3\/autoexec.cfg\r\necho \"set vm_cgame 2\" >> .\/baseq3\/autoexec.cfg\r\necho \"set vm_ui 2\" >> .\/baseq3\/autoexec.cfg\r\necho \"set dedicated 1\" >> .\/baseq3\/autoexec.cfg\r\n\r\necho \"\/\/Server Config\" >> .\/baseq3\/server.cfg\r\n\r\necho -e \"Install Completed\"",
+            "container": "ghcr.io\/parkervcp\/yolks:debian",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": []
+}
