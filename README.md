@@ -1,13 +1,15 @@
 # pterodactyl-Quake-Egg
-##Quake 3 Arena Egg for pterodactyl
+## Quake 3 Arena Egg for pterodactyl
 -download and install the egg
 -add all the server.cfg file as `./baseq3/server.cfg`.
 - It is a good practice to add your game, bots and maps configuration in externals files
-> personally I use : `./baseq3/config/<FILENAME>.cfg` for thoses.
+- personally I use : `./baseq3/config/<FILENAME>.cfg` for thoses.
 You can add extra configuration file with `+exec`
-##How to use it
+##H ow to use it
 Configure your server as normal.
+
 > `512 MB` of Ram and of storage is enough.
+
 The server port and ram size are set at startup as well as default map.
 Add you `.pak` files to `./baseq3` as well as your configuration files in `.cfg`
 ##Future plan
