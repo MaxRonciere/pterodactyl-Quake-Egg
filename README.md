@@ -14,7 +14,7 @@ Configure your server as normal.
 > `512 MB` of Ram and of storage is enough.
 
 The server port and ram size are set at startup as well as default map.
-Add you `.pak` files to `./baseq3` as well as your configuration files in `.cfg`
+Add your `.pak` files to `./baseq3` as well as your `.cfg` files.
 
 ## Future plan
 
